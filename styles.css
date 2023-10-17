@@ -1,0 +1,672 @@
+/* Loader Starts Here */
+/* Loader */
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  transition: opacity 0.75s, visibility 0.75s;
+}
+
+.loader h1 {
+  font-size: 8vh;
+  color: #3b4ef8;
+  font-family: "Raleway", sans-serif;
+  margin-bottom: 6vh;
+}
+
+.loader-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader::after {
+  content: "";
+  height: 2.5rem;
+  width: 2.5rem;
+  border: 5px solid whitesmoke;
+  border-top-color: #3b4ef8;
+  font-family: "Roboto Slab", serif;
+  border-radius: 50%;
+  animation: loading 1s ease infinite;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0turn);
+  }
+
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+/*Loader Ends Here  */
+
+/* Utility Classes */
+.roboto {
+  font-family: "Roboto", sans-serif;
+}
+
+.garamond {
+  font-family: "EB Garamond", serif;
+}
+
+.krub {
+  font-family: "Krub", sans-serif;
+}
+
+.raleway {
+  font-family: "Raleway", sans-serif;
+}
+.bottomLine {
+  margin-bottom: 0px !important;
+}
+
+.bottomLineExt::after {
+  content: "";
+  display: block;
+  background-color: #e03a3c;
+  height: 4px;
+  width: 4rem;
+  margin-top: 1rem !important;
+  margin: auto auto;
+}
+
+.orange {
+  color: #e03a3c;
+}
+.bgOrange {
+  background-color: #e03a3c;
+}
+.colorDarkBlue {
+  color: #2d405f !important;
+}
+
+.bgDarkGray {
+  background-color: #252525;
+}
+.red {
+  color: #e03a3c;
+}
+.bgRed {
+  background-color: #e03a3c;
+}
+
+.borderRed {
+  border: 2px solid #e03a3c;
+}
+.bgDarkBlue {
+  background-color: #2d405f !important;
+}
+
+.lightBlue {
+  color: #3b54f8;
+}
+
+.bgGain {
+  background-color: #f6f7ff;
+}
+
+.txtGray {
+  color: #444444;
+}
+
+.borderLight {
+  border: 1px solid #dee2e6;
+}
+
+.scale {
+  transform: scale(2.5);
+  margin-top: 1.2rem !important;
+  margin-right: 1.8rem !important;
+}
+.font15px {
+  font-size: 15px;
+}
+
+.font18px {
+  font-size: 18px;
+}
+
+.font24px {
+  font-size: 24px;
+}
+
+.font36px {
+  font-size: 36px;
+}
+.font30px {
+  font-size: 30px;
+}
+
+.font48px {
+  font-size: 48px;
+}
+
+.font14px {
+  font-size: 13px;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+/* Hero section starts here */
+
+.secHero {
+  height: 87vh;
+  background: url("img/hero-bg.jpg") no-repeat;
+  background-size: cover;
+  background-color: gray;
+  background-blend-mode: multiply;
+}
+
+/* Section (Clients) starts here */
+
+.secClients {
+  background-color: #f6f7ff;
+}
+
+.secClients .col-lg-2 {
+  width: 8rem;
+}
+
+.secClients img {
+  padding: 90%;
+  filter: grayscale(100%) !important;
+}
+
+.secClients img:hover {
+  filter: grayscale(0%) !important;
+  transition: filter 1s;
+}
+
+/* Section (Clients) Ends Here */
+
+.secAbout::before {
+  /* background-image: url("img/Solid_black.svg.png"); */
+  content: "";
+  position: absolute;
+  display: flex;
+  height: 110vh;
+  width: 100vw;
+  z-index: 1;
+  background-color: #1b1b1b !important ;
+  transform: skewY(-3deg);
+
+  /* transform: rotate(80deg); */
+}
+
+.secServices::before {
+  /* background-image: url("img/Solid_black.svg.png"); */
+  content: "";
+  position: absolute;
+  display: flex;
+  height: 130vh !important;
+  width: 100vw;
+  z-index: 1;
+  background-color: #1b1b1b !important ;
+  transform: skewY(-3deg);
+
+  /* transform: rotate(80deg); */
+}
+
+.secProjects {
+  height: 50vh;
+  margin-top: 145vh;
+}
+
+.secTeam{
+  position: absolute!important;
+  z-index: 2!important;
+  align-items: center;
+  display: flex;
+  width: 100vw!important;
+  margin-top: 8rem;
+}
+
+.secTeam::before{
+  content: "";
+  position: absolute;
+  display: flex;
+  height:45rem !important;
+  width: 100vw;
+  z-index: 0;
+  background-color: #1b1b1b !important ;
+  transform: skewY(-3deg);
+}
+
+.secContact{
+  margin-top: 55rem;
+}
+@media screen and (min-width: 0px) and (max-width: 566px) {
+  .secHero h1 {
+    font-size: 2.5rem !important;
+  }
+  .secHero h4 {
+    font-size: 18px !important;
+  }
+  footer .inpDiv {
+    width: 100% !important;
+  }
+  footer .inpDiv .inpSubmit {
+    width: 6rem !important;
+  }
+  .secAbout {
+    margin-top: 35rem !important ;
+  }
+  .secAbout::before {
+    /* background-image: url("img/Solid_black.svg.png"); */
+    content: "";
+    position: absolute;
+    display: flex;
+    height: 70rem;
+    width: 100vw;
+    z-index: 1;
+    background-color: #1b1b1b !important ;
+    transform: skewY(-3deg);
+
+    /* transform: rotate(80deg); */
+  }
+
+  .secProjects {
+    height: 50vh;
+    margin-top: 45rem;
+  }
+
+  .secFeatures {
+    margin-top: 10rem;
+  }
+
+  .secServices {
+    margin-top: 40rem !important;
+  }
+
+  .secServices::before {
+    /* background-image: url("img/Solid_black.svg.png"); */
+    content: "";
+    position: absolute;
+    display: flex;
+    height: 85rem !important;
+    width: 100vw;
+    z-index: 1;
+    background-color: #1b1b1b !important ;
+    transform: skewY(-3deg);
+    /* transform: rotate(80deg); */
+  }
+
+  .secPortfolio {
+    margin-top: 42rem !important;
+  }
+
+  .secCards{
+    margin-top: 8rem;
+  }
+  .secCards::before {
+    /* background-image: url("img/Solid_black.svg.png"); */
+    content: "";
+    position: absolute;
+    display: flex;
+    height: 110rem !important;
+    width: 100vw;
+    z-index: 0;
+    background-color: #1b1b1b !important ;
+    transform: skewY(-3deg);
+    /* transform: rotate(80deg); */
+  }
+
+  .secTeam{
+    position: absolute!important;
+    z-index: 2!important;
+    align-items: center;
+    display: flex;
+    width: 100vw!important;
+    margin-top: 10rem;
+  }
+  
+  .secTeam::before{
+    content: "";
+    position: absolute;
+    display: flex;
+    height:155rem !important;
+    width: 100vw;
+    z-index: 0;
+    background-color: #1b1b1b !important ;
+    transform: skewY(-3deg);
+  }
+
+  .secContact{
+    margin-top: 165rem!important;
+    
+  }
+}
+
+@media screen and (min-width: 566px) and (max-width: 922px) {
+  .secHero {
+    height: auto;
+  }
+
+  .secHero .row {
+    width: 80%;
+  }
+
+  .secHero h1 {
+    font-size: 2.5rem !important;
+  }
+  .secHero h4 {
+    font-size: 18px !important;
+  }
+  footer .inpDiv {
+    width: 100% !important;
+  }
+  footer .inpDiv .inpSubmit {
+    width: 6rem !important;
+  }
+  .secAbout {
+    margin-top: 40rem !important ;
+  }
+  .secAbout::before {
+    /* background-image: url("img/Solid_black.svg.png"); */
+    content: "";
+    position: absolute;
+    display: flex;
+    height: 70rem;
+    width: 100vw;
+    z-index: 1;
+    background-color: #1b1b1b !important ;
+    transform: skewY(-3deg);
+
+    /* transform: rotate(80deg); */
+  }
+
+  .secProjects{
+    margin-top: 40rem;
+  }
+  .secServices {
+    margin-top: 40rem !important;
+  }
+
+  .secServices::before {
+    /* background-image: url("img/Solid_black.svg.png"); */
+    content: "";
+    position: absolute;
+    display: flex;
+    height: 84rem !important;
+    width: 100vw;
+    z-index: 1;
+    background-color: #1b1b1b !important ;
+    transform: skewY(-3deg);
+    /* transform: rotate(80deg); */
+  }
+
+  .secPortfolio {
+    margin-top: 42rem !important;
+  }
+
+  .secCards {
+    margin-top: 10rem;
+  }
+  .secCards::before {
+    /* background-image: url("img/Solid_black.svg.png"); */
+    content: "";
+    position: absolute;
+    display: flex;
+    height: 85rem !important;
+    width: 100vw;
+    z-index: 0;
+    background-color: #1b1b1b !important ;
+    transform: skewY(-3deg);
+    /* transform: rotate(80deg); */
+  }
+
+
+  .secTeam{
+    position: absolute!important;
+    z-index: 2!important;
+    align-items: center;
+    display: flex;
+    width: 100vw!important;
+    margin-top: 6rem;
+  }
+  
+  .secTeam::before{
+    content: "";
+    position: absolute;
+    display: flex;
+    height:160rem !important;
+    width: 100vw;
+    z-index: 0;
+    background-color: #1b1b1b !important ;
+    transform: skewY(-3deg);
+  }
+}
+
+@media screen and (min-width: 922px) and (max-width: 1110px) {
+  .secHero {
+    height: auto;
+  }
+
+  .secHero .row {
+    width: 50%;
+  }
+
+  .secHero h1 {
+    font-size: 2.5rem !important;
+  }
+  .secHero h4 {
+    font-size: 18px !important;
+  }
+
+  .secAbout::before {
+    /* background-image: url("img/Solid_black.svg.png"); */
+    content: "";
+    position: absolute;
+    display: flex;
+    height: 58rem;
+    width: 100vw;
+    z-index: 1;
+    background-color: #1b1b1b !important ;
+    transform: skewY(-3deg);
+
+    /* transform: rotate(80deg); */
+  }
+
+  .secPortfolio {
+    margin-top: 30rem !important;
+  }
+  .secProjects {
+    height: 50vh;
+    margin-top: 30rem;
+  }
+
+  .secServices {
+    margin-top: 35rem !important;
+  }
+
+  .secServices::before {
+    /* background-image: url("img/Solid_black.svg.png"); */
+    content: "";
+    position: absolute;
+    display: flex;
+    height: 60rem !important;
+    width: 100vw;
+    z-index: 1;
+    background-color: #1b1b1b !important ;
+    transform: skewY(-3deg);
+    /* transform: rotate(80deg); */
+  }
+
+  .special {
+    margin: 0px 1rem !important;
+  }
+
+  .secFAQs{
+    margin-top: 7rem!important;
+  }
+  .secCards {
+    margin-top: 7rem;
+  }
+
+  .secCards::before {
+    /* background-image: url("img/Solid_black.svg.png"); */
+    content: "";
+    position: absolute;
+    display: flex;
+    height: 55rem !important;
+    width: 100vw;
+    z-index: 0;
+    background-color: #1b1b1b !important ;
+    transform: skewY(-3deg);
+    /* transform: rotate(80deg); */
+  }
+}
+
+@media screen and (min-width: 1110px) and (max-width:1441px) {
+  .secHero .row {
+    width: 50%;
+  }
+
+  .secHero h1 {
+    font-size: 2.5rem !important;
+  }
+  .secHero h4 {
+    font-size: 18px !important;
+  }
+
+  .secAbout::before {
+    /* background-image: url("img/Solid_black.svg.png"); */
+    content: "";
+    position: absolute;
+    display: flex;
+    height: 40rem;
+    width: 100vw;
+    z-index: 1;
+    background-color: #1b1b1b !important ;
+    transform: skewY(-3deg);
+
+    /* transform: rotate(80deg); */
+  }
+
+  .secProjects {
+    height: 50vh;
+    margin-top: 20rem;
+    padding-bottom: 0;
+  }
+
+  .secPortfolio{
+    margin-top: 25rem;
+  }
+  .secServices {
+    margin-top: 26rem !important;
+  }
+  .secServices::before {
+    /* background-image: url("img/Solid_black.svg.png"); */
+    content: "";
+    position: absolute;
+    display: flex;
+    height: 54rem !important;
+    width: 100vw;
+    z-index: 1;
+    background-color: #1b1b1b !important ;
+    transform: skewY(-3deg);
+
+    /* transform: rotate(80deg); */
+  }
+  .secCards::before {
+    /* background-image: url("img/Solid_black.svg.png"); */
+    content: "";
+    position: absolute;
+    display: flex;
+    height: 46rem !important;
+    width: 100vw;
+    z-index: 0;
+    background-color: #1b1b1b !important ;
+    transform: skewY(-3deg);
+    /* transform: rotate(80deg); */
+  }
+
+  .secFAQs{
+    margin-top: 7rem!important;
+  }
+}
+
+@media screen and (min-width: 1441px) and (max-width: 2560px) {
+  .secHero .row {
+    width: 40%;
+  }
+
+  .secHero h1 {
+    font-size: 4rem !important;
+  }
+  .secHero h4 {
+    font-size: 2rem !important;
+  }
+
+  .secHero .btn {
+    height: auto;
+    width: 13rem;
+    font-size: 1.6rem;
+  }
+
+  .secAbout::before {
+    /* background-image: url("img/Solid_black.svg.png"); */
+    content: "";
+    position: absolute;
+    display: flex;
+    height: 32rem;
+    width: 100vw;
+    z-index: 1;
+    background-color: #1b1b1b !important ;
+    transform: skewY(-3deg);
+
+    /* transform: rotate(80deg); */
+  }
+  .secProjects {
+    height: 50vh;
+    margin-top: 10rem;
+    padding-bottom: 0px!important;
+  }
+
+  .secServices {
+    margin-top: 23rem !important;
+  }
+  .secServices::before {
+    /* background-image: url("img/Solid_black.svg.png"); */
+    content: "";
+    position: absolute;
+    display: flex;
+    height: 50rem !important;
+    width: 100vw;
+    z-index: 1;
+    background-color: #1b1b1b !important ;
+    transform: skewY(-3deg);
+
+    /* transform: rotate(80deg); */
+  }
+
+  .secPortfolio {
+    margin-top: 50vh;
+  }
+
+  .secCards::before {
+    /* background-image: url("img/Solid_black.svg.png"); */
+    content: "";
+    position: absolute;
+    display: flex;
+    height: 50rem !important;
+    width: 100vw;
+    z-index: 0;
+    background-color: #1b1b1b !important ;
+    transform: skewY(-3deg);
+    /* transform: rotate(80deg); */
+  }
+}
